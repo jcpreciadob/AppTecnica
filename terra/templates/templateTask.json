@@ -1,0 +1,59 @@
+[
+  {
+    "dnsSearchDomains": null,
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "secretOptions": null,
+      "options": {
+        "awslogs-group": "${project}_${tipo}_${name}",
+        "awslogs-region": "${region}",
+        "awslogs-stream-prefix": "QA"
+      }
+    },
+    "entryPoint": null,
+    "portMappings": [
+      {
+        "hostPort": ${host_port},
+        "protocol": "${protocol}",
+        "containerPort": ${cont_port}
+      }
+    ],
+    "command": null,
+    "linuxParameters": null,
+    "cpu": ${cpu},       
+    "environment": ${containerVars},
+    "resourceRequirements": null,
+    "ulimits": null,
+    "dnsServers": null,
+    "mountPoints": [
+      {
+        "readOnly": null,
+        "containerPath": "${containerPath}",
+        "sourceVolume": "${sourceVolume}"
+      }
+    ],
+    "workingDirectory": null,
+    "secrets": null,
+    "dockerSecurityOptions": null,
+    "memoryReservation": ${memoryRes},
+    "volumesFrom": [],
+    "stopTimeout": null,
+    "image": "${imagen}",
+    "startTimeout": null,
+    "dependsOn": null,
+    "disableNetworking": null,
+    "interactive": null,
+    "healthCheck": null,
+    "essential": true,
+    "links": null,
+    "hostname": null,
+    "extraHosts": null,
+    "pseudoTerminal": null,
+    "user": null,
+    "readonlyRootFilesystem": null,
+    "dockerLabels": null,
+    "systemControls": null,
+    "privileged": ${privileged},
+    "name": "${project}_${tipo}_${name}"
+  }
+]
